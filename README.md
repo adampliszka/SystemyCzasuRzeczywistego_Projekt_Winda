@@ -1,42 +1,59 @@
-## Model mikrokontrolera zarządzającego kabiną windy
+# Winda jednokabinowa
 
-#### Opis projektu:
+## Opis
+Model **systemu windy jednokabinowej** w **AADL**.  
+Modelowana jest i warstwa logiczna i fizyczna
 
-System składa się z przycisków windy (piętra, otwieranie/zamykanie drzwi, oraz alarm), multipleksera, sensora odległości na podczerwień zamontowanego w drzwiach, linii telefonicznej do alarmue i sensorów wykrywających usterki, elementu zarządzającego logiką, oraz kontrolera który przetwarza sygnał cyfrowy na działanie silnika windy/silnik podpięty do drzwi.
+---
 
+## Struktura
+Model podzielony jest na następujące główne komponenty:
 
-#### Data [Data]
+### 1. **Dane i typy**
+- `FloorRequestType`, `PositionType`, `DoorStatusType` – reprezentacja danych z sensorów.
+- `MotorCommandType`, `DoorCommandType` – komendy.
+- Własności SEI:  
+  - `SEI::GrossWeight` – aktualna masa kabiny.  
+  - `SEI::WeightLimit` – maksymalne dozwolone obciążenie.  
+  - `PowerCapacity`, `PowerBudget`, `PowerSupply` – właściwości dostępnej i użytej energii.  
 
-- `ObjectInDoorData` odczyt wykrywacza obiektów w drzwiach
-- `CurrentAltitudeData` obecna wysokość bezwzględna
-- `NextStopData` następne piętro do którego jedzie winda
-- `FloorsAvailableData` dobrze uporządkowana lista pięter
-- `FloorsHeightData` mapuje dane piętro na bezwzględną wysokość
-- `FloorsSelectedData` zbiór zawierający wszystkie obecnie aktywne przyciski pięter
-- `MainMotorCommandData` w zakresie -1 do 1, napięcie prądu zasilajacego główny silnik windy
-- `EmergencyData` boolean, informuje o tym czy winda jest zepsuta i powinna przestać się poruszać
+### 2. **Urządzenia (devices)**
+- `FloorButton` – przyciski. 
+- `PositionSensor` – sensor położenia kabiny.  
+- `DoorSensor` – czujnik stanu drzwi.  
+- `Motor` – napęd windy.  
+- `Door` – drzwi z aktuatorem
+- `DummyPassengers` – symuluje obciążenie.
 
-- Cabin motor
-Door motor
-Floor sensors
-Cabin position sensor
-Call buttons (on floors)
-Cabin buttons (inside the elevator)
-Display panel
-Alarm system
-Weight sensor
-Emergency stop button
-Threads:
-Elevator Movement Thread - Handles the movement of the elevator between floors.
-Door Control Thread - Manages the opening and closing of doors.
-Request Processing Thread - Processes user requests and updates the request queue.
-Sensor Monitoring Thread - Continuously monitors sensors for position and safety.
-Display Update Thread - Updates the display with the current floor and direction.
-Event Handling Thread - Handles asynchronous events like emergency stops or alarms.
-Processes:
-Request Handling Process - Adds requests to the queue and prioritizes them.
-Movement Control Process - Determines the next floor and controls the motor.
-Door Operation Process - Ensures doors open/close safely.
-Safety Monitoring Process - Monitors sensors for safety violations (e.g., overload, obstruction).
-Event Dispatch Process - Dispatches events to appropriate threads.
-Idle State Process - Keeps the elevator idle when no requests are pending.
+### 3. **Procesy i wątki**
+- Procesy: `ButtonProcess`, `PositionProcess`, `DoorSensorProcess`, `ControlProcess`, `MotorProcess` i `DoorProcess`.  
+- Wątki: `ButtonReader`, `PositionReader`, `DoorSensorReader`, `ControllerLogic`, `MotorDriver` i `DoorDriver`.  
+
+### 4. **Subsystemy**
+- `InputSubsystem` – obsługa przycisków.  
+- `SensorSubsystem` – obsługa sensorów w drzwiach.
+- `ControlSubsystem` – logika sterowania.  
+- `ActuatorSubsystem` – sterowanie silnikiem i drzwiami.  
+
+### 5. **Sprzęt**
+- `lift_cpu_dual` – główny kontroler z dwoma interfejsami magistrali.  
+- `motor_mcu`, `door_mcu` – dedykowane procesory do obsługi aktuatorów.  
+- `main_ram`, `motor_ram`, `door_ram` – pamięci lokalne.  
+- `sensor_bus`, `actuator_bus` – oddzielne magistrale dla ruchu czujników i aktuatorów.  
+
+---
+
+## Modelowanie fizyczne
+Komponenty gdzie jest to aplikowalne, mają modelowaną masę, oraz energię
+
+---
+
+## Analizy
+Zostały wykonane analizy energii oraz mas
+
+---
+
+## 📜 Licencja
+Model opracowany w celach dydaktycznych. Możesz dowolnie używać, modyfikować i rozwijać w ramach projektów badawczych i edukacyjnych.
+
+---
