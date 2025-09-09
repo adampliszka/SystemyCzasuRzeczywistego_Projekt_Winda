@@ -5,6 +5,8 @@ Model **systemu windy jednokabinowej** w **AADL**.
 Modelowana jest i warstwa logiczna i fizyczna
 
 ---
+![](./ssr.PNG)
+---
 
 ## Struktura
 Model podzielony jest na następujące główne komponenty:
