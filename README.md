@@ -52,8 +52,3 @@ Komponenty gdzie jest to aplikowalne, mają modelowaną masę, oraz energię
 Zostały wykonane analizy energii oraz mas
 
 ---
-
-## 📜 Licencja
-Model opracowany w celach dydaktycznych. Możesz dowolnie używać, modyfikować i rozwijać w ramach projektów badawczych i edukacyjnych.
-
----
