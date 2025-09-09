@@ -1,0 +1,2244 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
+  <instance:SystemInstance name="LiftSystem_impl_Instance" category="system">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.WeightLimit"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="2000.0">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.21"/>
+    </ownedPropertyAssociation>
+    <componentInstance name="sensor_bus" category="bus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerCapacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="20.0">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.54/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:BusSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedBusSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:BusType" href="../LiftPK.aadl#LiftPK.sensor_bus"/>
+    </componentInstance>
+    <componentInstance name="actu_bus" category="bus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerCapacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="600.0">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.55/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:BusSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedBusSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:BusType" href="../LiftPK.aadl#LiftPK.actuator_bus"/>
+    </componentInstance>
+    <componentInstance name="passengers" category="device">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="1000.0">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedDeviceSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="../LiftPK.aadl#LiftPK.DummyPassengers.impl"/>
+    </componentInstance>
+    <componentInstance name="controller_mem" category="memory">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.5">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.59/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Word_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="32">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.59/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Memory_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="512">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.59/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedMemorySubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:MemoryType" href="../LiftPK.aadl#LiftPK.main_ram"/>
+    </componentInstance>
+    <componentInstance name="motor_mem" category="memory">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.60/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Word_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="32">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.60/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Memory_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="256">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.60/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedMemorySubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:MemoryType" href="../LiftPK.aadl#LiftPK.motor_ram"/>
+    </componentInstance>
+    <componentInstance name="door_mem" category="memory">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.61/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Word_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="32">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.61/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Memory_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="256">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.61/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedMemorySubcomponent.2"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:MemoryType" href="../LiftPK.aadl#LiftPK.door_ram"/>
+    </componentInstance>
+    <componentInstance name="controller_cpu" category="processor">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="2.0">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.1"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Clock_Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="5">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Processor_Capacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.18/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="busif_sensor" category="busAccess" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedBusAccess.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:BusAccess" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedBusAccess.0"/>
+      </featureInstance>
+      <featureInstance name="busif_actuator" category="busAccess" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedBusAccess.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:BusAccess" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedBusAccess.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedProcessorSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ProcessorType" href="../LiftPK.aadl#LiftPK.lift_cpu_dual"/>
+    </componentInstance>
+    <componentInstance name="motor_cpu" category="processor">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="1.0">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.57/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.5"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.57/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Clock_Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.57/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Processor_Capacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="40.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.18/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.57/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="busif" category="busAccess" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="10.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.57/@ownedBusAccess.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:BusAccess" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.57/@ownedBusAccess.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedProcessorSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ProcessorType" href="../LiftPK.aadl#LiftPK.motor_mcu"/>
+    </componentInstance>
+    <componentInstance name="door_cpu" category="processor">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="1.0">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.58/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.5"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.58/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Clock_Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.58/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Processor_Capacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="40.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.18/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.58/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="busif" category="busAccess" type="/2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.58/@ownedBusAccess.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:BusAccess" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.58/@ownedBusAccess.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedProcessorSubcomponent.2"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ProcessorType" href="../LiftPK.aadl#LiftPK.door_mcu"/>
+    </componentInstance>
+    <componentInstance name="input_subsys" category="system">
+      <featureInstance name="ReqOut" direction="out" type="/3">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.46/@ownedDataPort.0"/>
+      </featureInstance>
+      <componentInstance name="button" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.5">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="RequestOut" direction="out" type="/3">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+                <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.47/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../LiftPK.aadl#LiftPK.FloorButton.impl"/>
+      </componentInstance>
+      <componentInstance name="proc" category="process">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.6"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="ReqIn" type="/3">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.6"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="ReqOut" direction="out" type="/3">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.6"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedDataPort.1"/>
+        </featureInstance>
+        <componentInstance name="reader" category="thread">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.6"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </maximum>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <featureInstance name="ButtonIn" type="/3">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.6"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedDataPort.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="ButtonOut" direction="out" type="/3">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.6"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedDataPort.1/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.35/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../LiftPK.aadl#LiftPK.ButtonReader.impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.47/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../LiftPK.aadl#LiftPK.ButtonProcess.impl"/>
+      </componentInstance>
+      <connectionInstance name="button.RequestOut -> proc.reader.ButtonIn" complete="true" kind="portConnection" destination="/0/@componentInstance.9/@componentInstance.1/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.9/@componentInstance.0/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.9" source="/0/@componentInstance.9/@componentInstance.0/@featureInstance.0" destination="/0/@componentInstance.9/@componentInstance.1/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.47/@ownedPortConnection.0"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.9/@componentInstance.1" source="/0/@componentInstance.9/@componentInstance.1/@featureInstance.0" destination="/0/@componentInstance.9/@componentInstance.1/@componentInstance.0/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.35/@ownedPortConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedSystemSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../LiftPK.aadl#LiftPK.InputSubsystem.impl"/>
+    </componentInstance>
+    <componentInstance name="sensor_subsys" category="system">
+      <featureInstance name="PosOut" direction="out" type="/4">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="DoorStatusOut" direction="out" type="/5">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedDataPort.1"/>
+      </featureInstance>
+      <componentInstance name="sensor" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="1.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.3">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="PosOut" direction="out" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+                <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDataPort.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDataPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.49/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../LiftPK.aadl#LiftPK.PositionSensor.impl"/>
+      </componentInstance>
+      <componentInstance name="doorsensor" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="1.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.25">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="StatusOut" direction="out" type="/5">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+                <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedDataPort.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedDataPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.49/@ownedDeviceSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../LiftPK.aadl#LiftPK.DoorSensor.impl"/>
+      </componentInstance>
+      <componentInstance name="proc" category="process">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.7"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="PosIn" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.7"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="PosOut" direction="out" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.7"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedDataPort.1"/>
+        </featureInstance>
+        <componentInstance name="reader" category="thread">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.7"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </maximum>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPropertyAssociation.3"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Deadline"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPropertyAssociation.2"/>
+          </ownedPropertyAssociation>
+          <featureInstance name="PosIn" type="/4">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.7"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedDataPort.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="PosOut" direction="out" type="/4">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.7"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedDataPort.1/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.37/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../LiftPK.aadl#LiftPK.PositionReader.impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.49/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../LiftPK.aadl#LiftPK.PositionProcess.impl"/>
+      </componentInstance>
+      <componentInstance name="door_proc" category="process">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.2"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.8"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="StatusIn" type="/5">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.8"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="StatusOut" direction="out" type="/5">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.8"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedDataPort.1"/>
+        </featureInstance>
+        <componentInstance name="reader" category="thread">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.2"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.8"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="3">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </maximum>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPropertyAssociation.3"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Deadline"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPropertyAssociation.2"/>
+          </ownedPropertyAssociation>
+          <featureInstance name="StatusIn" type="/5">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.8"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedDataPort.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="StatusOut" direction="out" type="/5">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.8"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedDataPort.1/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../LiftPK.aadl#LiftPK.DoorSensorReader.impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.49/@ownedProcessSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../LiftPK.aadl#LiftPK.DoorSensorProcess.impl"/>
+      </componentInstance>
+      <connectionInstance name="sensor.PosOut -> proc.reader.PosIn" complete="true" kind="portConnection" destination="/0/@componentInstance.10/@componentInstance.2/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.10/@componentInstance.0/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.10" source="/0/@componentInstance.10/@componentInstance.0/@featureInstance.0" destination="/0/@componentInstance.10/@componentInstance.2/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.49/@ownedPortConnection.0"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.10/@componentInstance.2" source="/0/@componentInstance.10/@componentInstance.2/@featureInstance.0" destination="/0/@componentInstance.10/@componentInstance.2/@componentInstance.0/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.37/@ownedPortConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="doorsensor.StatusOut -> door_proc.reader.StatusIn" complete="true" kind="portConnection" destination="/0/@componentInstance.10/@componentInstance.3/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.10/@componentInstance.1/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.10" source="/0/@componentInstance.10/@componentInstance.1/@featureInstance.0" destination="/0/@componentInstance.10/@componentInstance.3/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.49/@ownedPortConnection.2"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.10/@componentInstance.3" source="/0/@componentInstance.10/@componentInstance.3/@featureInstance.0" destination="/0/@componentInstance.10/@componentInstance.3/@componentInstance.0/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedPortConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedSystemSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../LiftPK.aadl#LiftPK.SensorSubsystem.impl"/>
+    </componentInstance>
+    <componentInstance name="control_subsys" category="system">
+      <featureInstance name="ReqIn" type="/3">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="PosIn" type="/4">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="DoorStatusIn" type="/5">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="MotorOut" direction="out" type="/6">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedDataPort.3"/>
+      </featureInstance>
+      <featureInstance name="DoorOut" direction="out" type="/7">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedDataPort.4"/>
+      </featureInstance>
+      <componentInstance name="control_proc" category="process">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.6"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.3"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="ReqIn" type="/3">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="PosIn" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="DoorStatusIn" type="/5">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedDataPort.2"/>
+        </featureInstance>
+        <featureInstance name="MotorOut" direction="out" type="/6">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedDataPort.3"/>
+        </featureInstance>
+        <featureInstance name="DoorOut" direction="out" type="/7">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedDataPort.4"/>
+        </featureInstance>
+        <componentInstance name="logic" category="thread">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.3"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="5">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </maximum>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedPropertyAssociation.3"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Deadline"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedPropertyAssociation.2"/>
+          </ownedPropertyAssociation>
+          <featureInstance name="FloorReqIn" type="/3">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="1.0">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="PosIn" type="/4">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="1.0">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.1/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.1"/>
+          </featureInstance>
+          <featureInstance name="DoorStatusIn" type="/5">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="1.0">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.2/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.2"/>
+          </featureInstance>
+          <featureInstance name="MotorOut" direction="out" type="/6">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="2.0">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.3/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.3"/>
+          </featureInstance>
+          <featureInstance name="DoorOut" direction="out" type="/7">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.9"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="1.0">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.4/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedDataPort.4"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../LiftPK.aadl#LiftPK.ControllerLogic.impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../LiftPK.aadl#LiftPK.ControlProcess.impl"/>
+      </componentInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedSystemSubcomponent.2"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../LiftPK.aadl#LiftPK.ControlSubsystem.impl"/>
+    </componentInstance>
+    <componentInstance name="actuator_subsys" category="system">
+      <featureInstance name="MotorIn" type="/6">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="DoorIn" type="/7">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedDataPort.1"/>
+      </featureInstance>
+      <componentInstance name="motor" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="500.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="200.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="MotorIn" type="/6">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerSupply"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="500.0">
+                <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.51/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../LiftPK.aadl#LiftPK.Motor.impl"/>
+      </componentInstance>
+      <componentInstance name="door" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="50.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="20.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="DoorIn" type="/7">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="35.0">
+                <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.0/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerSupply"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="50.0">
+                <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.51/@ownedDeviceSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../LiftPK.aadl#LiftPK.Door.impl"/>
+      </componentInstance>
+      <componentInstance name="motor_proc" category="process">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.7"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.4"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.4"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.10"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="CmdIn" type="/6">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.4"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.10"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="CmdOut" direction="out" type="/6">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.4"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.10"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.1"/>
+        </featureInstance>
+        <componentInstance name="driver" category="thread">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.4"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.4"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.10"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="2">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </maximum>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <featureInstance name="MotorCmdIn" type="/6">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.4"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.10"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedDataPort.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="MotorCmdOut" direction="out" type="/6">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.4"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.10"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedDataPort.1/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../LiftPK.aadl#LiftPK.MotorDriver.impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.51/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../LiftPK.aadl#LiftPK.MotorProcess.impl"/>
+      </componentInstance>
+      <componentInstance name="door_proc" category="process">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.8"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.5"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.5"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.11"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="CmdIn" type="/7">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.5"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.11"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="CmdOut" direction="out" type="/7">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.5"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.11"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.1"/>
+        </featureInstance>
+        <componentInstance name="driver" category="thread">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.5"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.5"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.11"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="2">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+                </maximum>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <featureInstance name="DoorCmdIn" type="/7">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.5"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.11"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="2.0">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedDataPort.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="DoorCmdOut" direction="out" type="/7">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.5"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.11"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:RealLiteral" value="2.0">
+                  <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedDataPort.1/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.45/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../LiftPK.aadl#LiftPK.DoorDriver.impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.51/@ownedProcessSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../LiftPK.aadl#LiftPK.DoorProcess.impl"/>
+      </componentInstance>
+      <connectionInstance name="motor_proc.driver.MotorCmdOut -> motor.MotorIn" complete="true" kind="portConnection" destination="/0/@componentInstance.12/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.12/@componentInstance.2/@componentInstance.0/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.12/@componentInstance.2" source="/0/@componentInstance.12/@componentInstance.2/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.12/@componentInstance.2/@featureInstance.1">
+          <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.1"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@componentInstance.2/@featureInstance.1" destination="/0/@componentInstance.12/@componentInstance.0/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.51/@ownedPortConnection.1"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="door_proc.driver.DoorCmdOut -> door.DoorIn" complete="true" kind="portConnection" destination="/0/@componentInstance.12/@componentInstance.1/@featureInstance.0" source="/0/@componentInstance.12/@componentInstance.3/@componentInstance.0/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.12/@componentInstance.3" source="/0/@componentInstance.12/@componentInstance.3/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.12/@componentInstance.3/@featureInstance.1">
+          <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.45/@ownedPortConnection.1"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@componentInstance.3/@featureInstance.1" destination="/0/@componentInstance.12/@componentInstance.1/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.51/@ownedPortConnection.3"/>
+        </connectionReference>
+      </connectionInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedSystemSubcomponent.3"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../LiftPK.aadl#LiftPK.ActuatorSubsystem.impl"/>
+    </componentInstance>
+    <connectionInstance name="controller_cpu.busif_sensor -> sensor_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0" source="/0/@componentInstance.6/@featureInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.17"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.0" destination="/0/@componentInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedAccessConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="controller_cpu.busif_actuator -> actu_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.6/@featureInstance.1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.18"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="motor_cpu.busif -> actu_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.7/@featureInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.19"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.7/@featureInstance.0" destination="/0/@componentInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="door_cpu.busif -> actu_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.8/@featureInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.20"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedAccessConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="input_subsys.proc.reader.ButtonOut -> control_subsys.control_proc.logic.FloorReqIn" complete="true" kind="portConnection" destination="/0/@componentInstance.11/@componentInstance.0/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.9/@componentInstance.1/@componentInstance.0/@featureInstance.1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.12"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0/@componentInstance.9/@componentInstance.1" source="/0/@componentInstance.9/@componentInstance.1/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.9/@componentInstance.1/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.35/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.9" source="/0/@componentInstance.9/@componentInstance.1/@featureInstance.1" destination="/0/@componentInstance.9/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.47/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.9/@featureInstance.0" destination="/0/@componentInstance.11/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPortConnection.0"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.11" source="/0/@componentInstance.11/@featureInstance.0" destination="/0/@componentInstance.11/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.0"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.11/@componentInstance.0" source="/0/@componentInstance.11/@componentInstance.0/@featureInstance.0" destination="/0/@componentInstance.11/@componentInstance.0/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="sensor_subsys.proc.reader.PosOut -> control_subsys.control_proc.logic.PosIn" complete="true" kind="portConnection" destination="/0/@componentInstance.11/@componentInstance.0/@componentInstance.0/@featureInstance.1" source="/0/@componentInstance.10/@componentInstance.2/@componentInstance.0/@featureInstance.1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.13"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0/@componentInstance.10/@componentInstance.2" source="/0/@componentInstance.10/@componentInstance.2/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.10/@componentInstance.2/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.37/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.10" source="/0/@componentInstance.10/@componentInstance.2/@featureInstance.1" destination="/0/@componentInstance.10/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.49/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.10/@featureInstance.0" destination="/0/@componentInstance.11/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.11" source="/0/@componentInstance.11/@featureInstance.1" destination="/0/@componentInstance.11/@componentInstance.0/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.11/@componentInstance.0" source="/0/@componentInstance.11/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.11/@componentInstance.0/@componentInstance.0/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="sensor_subsys.door_proc.reader.StatusOut -> control_subsys.control_proc.logic.DoorStatusIn" complete="true" kind="portConnection" destination="/0/@componentInstance.11/@componentInstance.0/@componentInstance.0/@featureInstance.2" source="/0/@componentInstance.10/@componentInstance.3/@componentInstance.0/@featureInstance.1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.14"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0/@componentInstance.10/@componentInstance.3" source="/0/@componentInstance.10/@componentInstance.3/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.10/@componentInstance.3/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.10" source="/0/@componentInstance.10/@componentInstance.3/@featureInstance.1" destination="/0/@componentInstance.10/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.49/@ownedPortConnection.3"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.10/@featureInstance.1" destination="/0/@componentInstance.11/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPortConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.11" source="/0/@componentInstance.11/@featureInstance.2" destination="/0/@componentInstance.11/@componentInstance.0/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.11/@componentInstance.0" source="/0/@componentInstance.11/@componentInstance.0/@featureInstance.2" destination="/0/@componentInstance.11/@componentInstance.0/@componentInstance.0/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="control_subsys.control_proc.logic.MotorOut -> actuator_subsys.motor_proc.driver.MotorCmdIn" complete="true" kind="portConnection" destination="/0/@componentInstance.12/@componentInstance.2/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.11/@componentInstance.0/@componentInstance.0/@featureInstance.3">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.15"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0/@componentInstance.11/@componentInstance.0" source="/0/@componentInstance.11/@componentInstance.0/@componentInstance.0/@featureInstance.3" destination="/0/@componentInstance.11/@componentInstance.0/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.3"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.11" source="/0/@componentInstance.11/@componentInstance.0/@featureInstance.3" destination="/0/@componentInstance.11/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.3"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.11/@featureInstance.3" destination="/0/@componentInstance.12/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPortConnection.3"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@featureInstance.0" destination="/0/@componentInstance.12/@componentInstance.2/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.51/@ownedPortConnection.0"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.12/@componentInstance.2" source="/0/@componentInstance.12/@componentInstance.2/@featureInstance.0" destination="/0/@componentInstance.12/@componentInstance.2/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="control_subsys.control_proc.logic.DoorOut -> actuator_subsys.door_proc.driver.DoorCmdIn" complete="true" kind="portConnection" destination="/0/@componentInstance.12/@componentInstance.3/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.11/@componentInstance.0/@componentInstance.0/@featureInstance.4">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPropertyAssociation.16"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0/@componentInstance.11/@componentInstance.0" source="/0/@componentInstance.11/@componentInstance.0/@componentInstance.0/@featureInstance.4" destination="/0/@componentInstance.11/@componentInstance.0/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPortConnection.4"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.11" source="/0/@componentInstance.11/@componentInstance.0/@featureInstance.4" destination="/0/@componentInstance.11/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.4"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.11/@featureInstance.4" destination="/0/@componentInstance.12/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.63/@ownedPortConnection.4"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.12" source="/0/@componentInstance.12/@featureInstance.1" destination="/0/@componentInstance.12/@componentInstance.3/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.51/@ownedPortConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.12/@componentInstance.3" source="/0/@componentInstance.12/@componentInstance.3/@featureInstance.0" destination="/0/@componentInstance.12/@componentInstance.3/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.45/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../LiftPK.aadl#LiftPK.LiftSystem.impl"/>
+    <systemOperationMode name="No Modes"/>
+    <componentImplementation xsi:type="aadl2:SystemImplementation" href="../LiftPK.aadl#LiftPK.LiftSystem.impl"/>
+  </instance:SystemInstance>
+  <instance:ComponentInstance name="LiftPK::sensor_bus" category="bus">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerCapacity"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="20.0">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.54/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:BusType" href="../LiftPK.aadl#LiftPK.sensor_bus"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="LiftPK::actuator_bus" category="bus">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerCapacity"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="600.0">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.55/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:BusType" href="../LiftPK.aadl#LiftPK.actuator_bus"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="LiftPK::FloorRequestType" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../LiftPK.aadl#LiftPK.FloorRequestType"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="LiftPK::PositionType" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../LiftPK.aadl#LiftPK.PositionType"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="LiftPK::DoorStatusType" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../LiftPK.aadl#LiftPK.DoorStatusType"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="LiftPK::MotorCommandType" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../LiftPK.aadl#LiftPK.MotorCommandType"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="LiftPK::DoorCommandType" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../LiftPK.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../LiftPK.aadl#LiftPK.DoorCommandType"/>
+  </instance:ComponentInstance>
+</xmi:XMI>

@@ -1,0 +1,484 @@
+package LiftPK
+public
+	with Data_Model;
+	with sei;
+
+	-------------------------------------------------------------------
+	-- Data Types
+	-------------------------------------------------------------------
+	data FloorRequestType
+	  properties
+	    Data_Model::Data_Representation => Enum;
+	end FloorRequestType;
+	data implementation FloorRequestType.impl
+	end FloorRequestType.impl;
+
+	data PositionType
+	  properties
+	    Data_Model::Data_Representation => Enum;
+	end PositionType;
+	data implementation PositionType.impl
+	end PositionType.impl;
+
+	data MotorCommandType
+	  properties
+	    Data_Model::Data_Representation => Enum;
+	end MotorCommandType;
+	data implementation MotorCommandType.impl
+	end MotorCommandType.impl;
+
+	data DoorCommandType
+	  properties
+	    Data_Model::Data_Representation => Boolean;
+	end DoorCommandType;
+	data implementation DoorCommandType.impl
+	end DoorCommandType.impl;
+
+	data DoorStatusType
+	  properties
+	    Data_Model::Data_Representation => Boolean;
+	end DoorStatusType;
+	data implementation DoorStatusType.impl
+	end DoorStatusType.impl;
+
+	-------------------------------------------------------------------
+	-- Devices
+	-------------------------------------------------------------------
+	device FloorButton
+		features
+			RequestOut: out data port FloorRequestType
+				{ SEI::PowerBudget => 0.1 W; };
+		properties
+			SEI::GrossWeight => 0.2 Kg;
+			SEI::PowerCapacity => 0.5 W;
+	end FloorButton;
+	device implementation FloorButton.impl
+	end FloorButton.impl;
+
+	device PositionSensor
+		features
+			PosOut: out data port PositionType
+				{ SEI::PowerBudget => 0.2 W; };
+		properties
+			SEI::GrossWeight => 0.3 Kg;
+			SEI::PowerCapacity => 1.0 W;
+	end PositionSensor;
+	device implementation PositionSensor.impl
+	end PositionSensor.impl;
+
+	device DoorSensor
+		features
+			StatusOut: out data port DoorStatusType
+				{ SEI::PowerBudget => 0.2 W; };
+		properties
+			SEI::GrossWeight => 0.25 Kg;
+			SEI::PowerCapacity => 1.0 W;
+	end DoorSensor;
+	device implementation DoorSensor.impl
+	end DoorSensor.impl;
+
+	device Motor
+		features
+			MotorIn: in data port MotorCommandType
+				{ SEI::PowerSupply => 500.0 W; };
+		properties
+			SEI::GrossWeight => 200.0 Kg;
+			SEI::PowerCapacity => 500.0 W;
+	end Motor;
+	device implementation Motor.impl
+	end Motor.impl;
+
+	device Door
+		features
+			DoorIn: in data port DoorCommandType
+				{ SEI::PowerSupply => 50.0 W; SEI::PowerBudget => 35.0 W; };
+		properties
+			SEI::GrossWeight => 20.0 Kg;
+			SEI::PowerCapacity => 50.0 W;
+	end Door;
+	device implementation Door.impl
+	end Door.impl;
+	
+	device DummyPassengers
+		properties
+			SEI::GrossWeight => 1000.0 Kg;
+	end DummyPassengers;
+	device implementation DummyPassengers.impl
+	end DummyPassengers.impl;
+
+	-------------------------------------------------------------------
+	-- Threads
+	-------------------------------------------------------------------
+	thread ButtonReader
+		features
+			ButtonIn : in data port FloorRequestType { SEI::PowerBudget => 0.1 W; };
+			ButtonOut : out data port FloorRequestType { SEI::PowerBudget => 0.1 W; };
+		properties
+			Dispatch_Protocol => Sporadic;
+			Compute_Execution_Time => 0ms..3ms;
+	end ButtonReader;
+	thread implementation ButtonReader.impl
+	end ButtonReader.impl;
+
+	thread PositionReader
+		features
+			PosIn : in data port PositionType { SEI::PowerBudget => 0.2 W; };
+			PosOut : out data port PositionType { SEI::PowerBudget => 0.2 W; };
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 50ms;
+			Deadline => 50ms;
+			Compute_Execution_Time => 0ms..3ms;
+	end PositionReader;
+	thread implementation PositionReader.impl
+	end PositionReader.impl;
+
+	thread DoorSensorReader
+		features
+			StatusIn: in data port DoorStatusType { SEI::PowerBudget => 0.2 W; };
+			StatusOut: out data port DoorStatusType { SEI::PowerBudget => 0.2 W; };
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 50ms;
+			Deadline => 50ms;
+			Compute_Execution_Time => 0ms..3ms;
+	end DoorSensorReader;
+	thread implementation DoorSensorReader.impl
+	end DoorSensorReader.impl;
+
+	thread ControllerLogic
+		features
+			FloorReqIn: in data port FloorRequestType { SEI::PowerBudget => 1.0 W; };
+			PosIn: in data port PositionType { SEI::PowerBudget => 1.0 W; };
+			DoorStatusIn: in data port DoorStatusType { SEI::PowerBudget => 1.0 W; };
+			MotorOut: out data port MotorCommandType { SEI::PowerBudget => 2.0 W; };
+			DoorOut: out data port DoorCommandType { SEI::PowerBudget => 1.0 W; };
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 50ms;
+			Deadline => 50ms;
+			Compute_Execution_Time => 0ms..5ms;
+	end ControllerLogic;
+	thread implementation ControllerLogic.impl
+	end ControllerLogic.impl;
+
+	thread MotorDriver
+		features
+			MotorCmdIn : in data port MotorCommandType { SEI::PowerBudget => 5.0 W; };
+			MotorCmdOut : out data port MotorCommandType { SEI::PowerBudget => 5.0 W; };
+		properties
+			Dispatch_Protocol => Sporadic;
+			Compute_Execution_Time => 0ms..2ms;
+	end MotorDriver;
+	thread implementation MotorDriver.impl
+	end MotorDriver.impl;
+
+	thread DoorDriver
+		features
+			DoorCmdIn : in data port DoorCommandType { SEI::PowerBudget => 2.0 W; };
+			DoorCmdOut : out data port DoorCommandType { SEI::PowerBudget => 2.0 W; };
+		properties
+			Dispatch_Protocol => Sporadic;
+			Compute_Execution_Time => 0ms..2ms;
+	end DoorDriver;
+	thread implementation DoorDriver.impl
+	end DoorDriver.impl;
+
+	-------------------------------------------------------------------
+	-- Processes
+	-------------------------------------------------------------------
+	process ButtonProcess
+		features
+			ReqIn: in data port FloorRequestType;
+			ReqOut: out data port FloorRequestType;
+	end ButtonProcess;
+	process implementation ButtonProcess.impl
+		subcomponents
+			reader: thread ButtonReader.impl;
+		connections
+			c1: port ReqIn -> reader.ButtonIn;
+			c2: port reader.ButtonOut -> ReqOut;
+	end ButtonProcess.impl;
+
+	process PositionProcess
+		features
+			PosIn: in data port PositionType;
+			PosOut: out data port PositionType;
+	end PositionProcess;
+	process implementation PositionProcess.impl
+		subcomponents
+			reader: thread PositionReader.impl;
+		connections
+			c1: port PosIn -> reader.PosIn;
+			c2: port reader.PosOut -> PosOut;
+	end PositionProcess.impl;
+
+	process DoorSensorProcess
+		features
+			StatusIn: in data port DoorStatusType;
+			StatusOut: out data port DoorStatusType;
+	end DoorSensorProcess;
+	process implementation DoorSensorProcess.impl
+		subcomponents
+			reader: thread DoorSensorReader.impl;
+		connections
+			c1: port StatusIn -> reader.StatusIn;
+			c2: port reader.StatusOut -> StatusOut;
+	end DoorSensorProcess.impl;
+
+	process ControlProcess
+		features
+			ReqIn: in data port FloorRequestType;
+			PosIn: in data port PositionType;
+			DoorStatusIn: in data port DoorStatusType;
+			MotorOut: out data port MotorCommandType;
+			DoorOut: out data port DoorCommandType;
+	end ControlProcess;
+	process implementation ControlProcess.impl
+		subcomponents
+			logic: thread ControllerLogic.impl;
+		connections
+			c1: port ReqIn -> logic.FloorReqIn;
+			c2: port PosIn -> logic.PosIn;
+			c3: port DoorStatusIn -> logic.DoorStatusIn;
+			c4: port logic.MotorOut -> MotorOut;
+			c5: port logic.DoorOut -> DoorOut;
+	end ControlProcess.impl;
+
+	process MotorProcess
+		features
+			CmdIn: in data port MotorCommandType;
+			CmdOut: out data port MotorCommandType;
+	end MotorProcess;
+	process implementation MotorProcess.impl
+		subcomponents
+			driver: thread MotorDriver.impl;
+		connections
+			c1: port CmdIn -> driver.MotorCmdIn;
+			c2: port driver.MotorCmdOut -> CmdOut;
+	end MotorProcess.impl;
+
+	process DoorProcess
+		features
+			CmdIn: in data port DoorCommandType;
+			CmdOut: out data port DoorCommandType;
+	end DoorProcess;
+	process implementation DoorProcess.impl
+		subcomponents
+			driver: thread DoorDriver.impl;
+		connections
+			c1: port CmdIn -> driver.DoorCmdIn;
+			c2: port driver.DoorCmdOut -> CmdOut;
+	end DoorProcess.impl;
+
+	-------------------------------------------------------------------
+	-- Subsystems
+	-------------------------------------------------------------------
+	system InputSubsystem
+		features
+			ReqOut: out data port FloorRequestType;
+	end InputSubsystem;
+	system implementation InputSubsystem.impl
+		subcomponents
+			button: device FloorButton.impl;
+			proc: process ButtonProcess.impl;
+		connections
+			c1: port button.RequestOut -> proc.ReqIn;
+			c2: port proc.ReqOut -> ReqOut;
+	end InputSubsystem.impl;
+
+	system SensorSubsystem
+		features
+			PosOut: out data port PositionType;
+			DoorStatusOut: out data port DoorStatusType;
+	end SensorSubsystem;
+	system implementation SensorSubsystem.impl
+		subcomponents
+			sensor: device PositionSensor.impl;
+			proc: process PositionProcess.impl;
+			doorsensor: device DoorSensor.impl;
+			door_proc: process DoorSensorProcess.impl;
+		connections
+			c1: port sensor.PosOut -> proc.PosIn;
+			c2: port proc.PosOut -> PosOut;
+			c3: port doorsensor.StatusOut -> door_proc.StatusIn;
+			c4: port door_proc.StatusOut -> DoorStatusOut;
+	end SensorSubsystem.impl;
+
+	system ActuatorSubsystem
+		features
+			MotorIn: in data port MotorCommandType;
+			DoorIn: in data port DoorCommandType;
+	end ActuatorSubsystem;
+	system implementation ActuatorSubsystem.impl
+		subcomponents
+			motor: device Motor.impl;
+			door: device Door.impl;
+			motor_proc: process MotorProcess.impl;
+			door_proc: process DoorProcess.impl;
+		connections
+			c1: port MotorIn -> motor_proc.CmdIn;
+			c2: port motor_proc.CmdOut -> motor.MotorIn;
+			c3: port DoorIn -> door_proc.CmdIn;
+			c4: port door_proc.CmdOut -> door.DoorIn;
+	end ActuatorSubsystem.impl;
+
+	system ControlSubsystem
+		features
+			ReqIn: in data port FloorRequestType;
+			PosIn: in data port PositionType;
+			DoorStatusIn: in data port DoorStatusType;
+			MotorOut: out data port MotorCommandType;
+			DoorOut: out data port DoorCommandType;
+	end ControlSubsystem;
+	system implementation ControlSubsystem.impl
+		subcomponents
+			control_proc: process ControlProcess.impl;
+		connections
+			c1: port ReqIn -> control_proc.ReqIn;
+			c2: port PosIn -> control_proc.PosIn;
+			c3: port DoorStatusIn -> control_proc.DoorStatusIn;
+			c4: port control_proc.MotorOut -> MotorOut;
+			c5: port control_proc.DoorOut -> DoorOut;
+	end ControlSubsystem.impl;
+
+	-------------------------------------------------------------------
+	-- Hardware
+	-------------------------------------------------------------------
+	bus sensor_bus
+		properties
+			SEI::PowerCapacity => 20.0 W;
+	end sensor_bus;
+
+	bus actuator_bus
+		properties
+			SEI::PowerCapacity => 600.0 W;
+	end actuator_bus;
+
+	processor lift_cpu_dual
+		features
+			busif_sensor: requires bus access sensor_bus { SEI::PowerBudget => 5.0 W; };
+			busif_actuator: requires bus access actuator_bus { SEI::PowerBudget => 5.0 W; };
+		properties
+			Scheduling_Protocol => (Round_Robin_Protocol);
+			Clock_Period => 5ms;
+			Timing_Properties::Processor_Capacity => 5.0 MIPS;
+			SEI::GrossWeight => 2.0 Kg;
+	end lift_cpu_dual;
+
+	processor motor_mcu
+		features
+			busif: requires bus access actuator_bus { SEI::PowerBudget => 10.0 W; };
+		properties
+			Scheduling_Protocol => (RMS);
+			Clock_Period => 1ms;
+			Timing_Properties::Processor_Capacity => 40.0 MIPS;
+			SEI::GrossWeight => 1.0 Kg;
+	end motor_mcu;
+
+	processor door_mcu
+		features
+			busif: requires bus access actuator_bus { SEI::PowerBudget => 5.0 W; };
+		properties
+			Scheduling_Protocol => (RMS);
+			Clock_Period => 1ms;
+			Timing_Properties::Processor_Capacity => 40.0 MIPS;
+			SEI::GrossWeight => 1.0 Kg;
+	end door_mcu;
+
+	memory main_ram
+		properties
+			Memory_Properties::Word_Size => 32 Bits;
+			Memory_Properties::Memory_Size => 512 MByte;
+			SEI::GrossWeight => 0.5 Kg;
+	end main_ram;
+
+	memory motor_ram
+		properties
+			Memory_Properties::Word_Size => 32 Bits;
+			Memory_Properties::Memory_Size => 256 KByte;
+			SEI::GrossWeight => 0.1 Kg;
+	end motor_ram;
+
+	memory door_ram
+		properties
+			Memory_Properties::Word_Size => 32 Bits;
+			Memory_Properties::Memory_Size => 256 KByte;
+			SEI::GrossWeight => 0.1 Kg;
+	end door_ram;
+
+	-------------------------------------------------------------------
+	-- System Implementation
+	-------------------------------------------------------------------
+	system LiftSystem
+	end LiftSystem;
+
+	system implementation LiftSystem.impl
+		subcomponents
+			passengers: device DummyPassengers.impl;
+			-- subsystems
+			input_subsys: system InputSubsystem.impl;
+			sensor_subsys: system SensorSubsystem.impl;
+			control_subsys: system ControlSubsystem.impl;
+			actuator_subsys: system ActuatorSubsystem.impl;
+
+			-- hardware
+			controller_cpu: processor lift_cpu_dual;
+			motor_cpu: processor motor_mcu;
+			door_cpu: processor door_mcu;
+
+			sensor_bus: bus sensor_bus;
+			actu_bus: bus actuator_bus;
+
+			-- memory
+			controller_mem: memory main_ram;
+			motor_mem: memory motor_ram;
+			door_mem: memory door_ram;
+		connections
+			c_req: port input_subsys.ReqOut -> control_subsys.ReqIn;
+			c_pos: port sensor_subsys.PosOut -> control_subsys.PosIn;
+			c_doorstat: port sensor_subsys.DoorStatusOut -> control_subsys.DoorStatusIn;
+			c_motor: port control_subsys.MotorOut -> actuator_subsys.MotorIn;
+			c_door:  port control_subsys.DoorOut  -> actuator_subsys.DoorIn;
+
+			b_ctrl_sensor: bus access controller_cpu.busif_sensor -> sensor_bus;
+			b_ctrl_act: bus access controller_cpu.busif_actuator -> actu_bus;
+			b_motor: bus access motor_cpu.busif -> actu_bus;
+			b_door: bus access door_cpu.busif  -> actu_bus;
+		properties
+			-- Processor bindings
+			Actual_Processor_Binding => (reference(controller_cpu)) applies to input_subsys.proc;
+			Actual_Processor_Binding => (reference(controller_cpu)) applies to sensor_subsys.proc;
+			Actual_Processor_Binding => (reference(controller_cpu)) applies to sensor_subsys.door_proc;
+			Actual_Processor_Binding => (reference(controller_cpu)) applies to control_subsys.control_proc;
+
+			Actual_Processor_Binding => (reference(motor_cpu)) applies to actuator_subsys.motor_proc;
+			Actual_Processor_Binding => (reference(door_cpu))  applies to actuator_subsys.door_proc;
+
+			-- Memory bindings
+			Actual_Memory_Binding => (reference(controller_mem)) applies to input_subsys.proc;
+			Actual_Memory_Binding => (reference(controller_mem)) applies to sensor_subsys.proc;
+			Actual_Memory_Binding => (reference(controller_mem)) applies to sensor_subsys.door_proc;
+			Actual_Memory_Binding => (reference(controller_mem)) applies to control_subsys.control_proc;
+
+			Actual_Memory_Binding => (reference(motor_mem)) applies to actuator_subsys.motor_proc;
+			Actual_Memory_Binding => (reference(door_mem))  applies to actuator_subsys.door_proc;
+
+			-- Connection bindings
+			Actual_Connection_Binding => (reference(sensor_bus)) applies to c_req;
+			Actual_Connection_Binding => (reference(sensor_bus)) applies to c_pos;
+			Actual_Connection_Binding => (reference(sensor_bus)) applies to c_doorstat;
+
+			Actual_Connection_Binding => (reference(actu_bus)) applies to c_motor;
+			Actual_Connection_Binding => (reference(actu_bus)) applies to c_door;
+
+			-- Bus access connection bindings
+			Actual_Connection_Binding => (reference(sensor_bus)) applies to b_ctrl_sensor;
+			Actual_Connection_Binding => (reference(actu_bus)) applies to b_ctrl_act;
+			Actual_Connection_Binding => (reference(actu_bus)) applies to b_motor;
+			Actual_Connection_Binding => (reference(actu_bus)) applies to b_door;
+			
+			SEI::WeightLimit => 2000.0 Kg;
+	end LiftSystem.impl;
+
+end LiftPK;

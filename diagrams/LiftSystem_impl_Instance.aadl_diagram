@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="4f90472d-d9aa-43ae-a356-0c4f338ab1c3" manual="true">
+    <element uuid="4d533e02-f86d-468d-8a99-01ae667eb3e6" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>actu_bus</seg>
+      </bo>
+      <position x="890.0" y="480.0"/>
+      <size width="106.11458206176758" height="40.0"/>
+    </element>
+    <element uuid="284e7bd6-1ec5-460e-97a7-345bd2f064e6" manual="true">
+      <element uuid="6c54095f-c891-418e-a536-88de4fab9c1f" manual="true">
+        <element uuid="1aa8a466-f3f5-4e73-8d33-2333d88682dd" manual="true" dockArea="bottom">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>DoorIn</seg>
+          </bo>
+          <position x="20.0" y="26.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>door</seg>
+        </bo>
+        <position x="250.0000000000001" y="40.0"/>
+        <size width="130.0" height="50.0"/>
+      </element>
+      <element uuid="3920a19f-f5b9-4ae5-97b1-a35198c790bb" manual="true">
+        <element uuid="ffb27f97-7ba0-487e-8ed3-470e7c1abb63" manual="true">
+          <element uuid="a0a45424-1597-4a2b-ba4f-7b4b80b64856" manual="true" dockArea="bottom">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>DoorCmdIn</seg>
+            </bo>
+            <position x="110.0" y="86.0"/>
+          </element>
+          <element uuid="c9c044e6-07ff-435c-a4e2-51e7091cf497" manual="true" dockArea="top">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>DoorCmdOut</seg>
+            </bo>
+            <position x="170.0"/>
+          </element>
+          <element uuid="bacafaab-4ca8-4b0e-9230-805ff941e362" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+              <seg>11ec7e31-22b4-453d-a149-03f010c4f863</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>component_instance</seg>
+            <seg>driver</seg>
+          </bo>
+          <position x="40.0" y="60.00000000000003"/>
+          <size width="290.0" height="110.0"/>
+        </element>
+        <element uuid="462cedc9-fb10-4035-9ecd-ed8bb8c5a548" manual="true" dockArea="bottom">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>CmdIn</seg>
+          </bo>
+          <position x="180.0" y="206.0"/>
+        </element>
+        <element uuid="8f2e8798-066a-4ccb-8072-8b88273449c5" manual="true" dockArea="top">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>CmdOut</seg>
+          </bo>
+          <position x="240.0"/>
+        </element>
+        <element uuid="2086a3c7-a859-44ab-8414-615c9364d0e7" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+            <seg>11ec7e31-22b4-453d-a149-03f010c4f863</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>door_proc</seg>
+        </bo>
+        <position x="20.000000000000114" y="110.0"/>
+        <size width="360.0" height="230.0"/>
+      </element>
+      <element uuid="30cdcb63-ca0c-44c3-82f6-f92ec1e98932" manual="true">
+        <element uuid="f9946bf7-6a37-4d12-9b52-88b66aa84153" manual="true" dockArea="bottom">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>MotorIn</seg>
+          </bo>
+          <position x="19.999999999999886" y="26.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>motor</seg>
+        </bo>
+        <position x="580.0000000000002" y="40.0"/>
+        <size width="129.9999999999999" height="50.0"/>
+      </element>
+      <element uuid="ebb89cb9-fac1-47ed-b3ac-073a34a3f968" manual="true">
+        <element uuid="ba9a7faa-87c9-4e11-ac04-3a1a1a7853c0" manual="true">
+          <element uuid="7cfe0d11-2e4e-4fc2-b6c2-d61abcb43da3" manual="true" dockArea="bottom">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>MotorCmdIn</seg>
+            </bo>
+            <position x="80.0" y="86.0"/>
+          </element>
+          <element uuid="3b90e418-7c6f-46fc-aac4-91d179373d07" manual="true" dockArea="top">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>MotorCmdOut</seg>
+            </bo>
+            <position x="160.0"/>
+          </element>
+          <element uuid="b20f84b1-7b28-4325-8fb1-cf51708143f3" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+              <seg>70030c22-8f42-4d88-8f01-231f2dd351ec</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>component_instance</seg>
+            <seg>driver</seg>
+          </bo>
+          <position x="20.0" y="60.00000000000003"/>
+          <size width="279.9999999999998" height="110.0"/>
+        </element>
+        <element uuid="7ef3a35e-63ee-4e95-a278-6a556c2c7df6" manual="true" dockArea="bottom">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>CmdIn</seg>
+          </bo>
+          <position x="130.0" y="203.33333333333414"/>
+        </element>
+        <element uuid="6ed3c6e3-a302-4124-9a45-0c4824daa18f" manual="true" dockArea="top">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>CmdOut</seg>
+          </bo>
+          <position x="220.0"/>
+        </element>
+        <element uuid="b43a8d21-a3b8-4445-9fd3-862157039e86" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+            <seg>70030c22-8f42-4d88-8f01-231f2dd351ec</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>motor_proc</seg>
+        </bo>
+        <position x="370.0000000000001" y="110.0"/>
+        <size width="359.9999999999998" height="227.33333333333414"/>
+      </element>
+      <element uuid="5b0f9db3-e31f-4163-b790-df5aaab3bf23" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c2 : LiftSystem_impl_Instance.actuator_subsys.door_proc.driver.DoorCmdOut -> LiftSystem_impl_Instance.actuator_subsys.door_proc.CmdOut</seg>
+        </bo>
+      </element>
+      <element uuid="3a05c6e1-5f2f-4bbc-ba63-956b22d15984" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c2 : LiftSystem_impl_Instance.actuator_subsys.motor_proc.CmdOut -> LiftSystem_impl_Instance.actuator_subsys.motor.MotorIn</seg>
+        </bo>
+      </element>
+      <element uuid="f45e60d2-b5ee-41df-954e-56132aa3f1ff" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c2 : LiftSystem_impl_Instance.actuator_subsys.motor_proc.driver.MotorCmdOut -> LiftSystem_impl_Instance.actuator_subsys.motor_proc.CmdOut</seg>
+        </bo>
+      </element>
+      <element uuid="2713541f-7889-4a2b-ba8c-c8496e8b65b3" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c4 : LiftSystem_impl_Instance.actuator_subsys.door_proc.CmdOut -> LiftSystem_impl_Instance.actuator_subsys.door.DoorIn</seg>
+        </bo>
+      </element>
+      <element uuid="193e899f-2912-4ec6-976f-862e8ce3da2f" manual="true" dockArea="bottom">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>DoorIn</seg>
+        </bo>
+        <position x="200.0000000000001" y="352.0000000000009"/>
+      </element>
+      <element uuid="d9a439b8-96e1-4943-a50e-77d6f958369e" manual="true" dockArea="bottom">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>MotorIn</seg>
+        </bo>
+        <position x="490.0000000000001" y="352.0000000000009"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>actuator_subsys</seg>
+      </bo>
+      <position x="550.0" y="50.0"/>
+      <size width="729.9999999999999" height="376.0000000000009"/>
+    </element>
+    <element uuid="e87a19fe-9738-4efe-b631-18079999240f" manual="true">
+      <element uuid="9eb1a862-a06c-4a5a-b60b-bb7f51e00dff" manual="true">
+        <element uuid="ac4ba7ef-f910-4156-95bb-17e65da68ce0" manual="true">
+          <element uuid="65cff118-7f4f-4bdd-8db0-5610b4d640a0" manual="true" dockArea="top">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>DoorOut</seg>
+            </bo>
+            <position x="40.0"/>
+          </element>
+          <element uuid="e8d0747b-82e8-44f5-9714-91f0271e9fad" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>DoorStatusIn</seg>
+            </bo>
+            <position y="130.0"/>
+          </element>
+          <element uuid="cc652555-d67f-4261-8c34-a8e66156eb9b" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>FloorReqIn</seg>
+            </bo>
+            <position y="20.0"/>
+          </element>
+          <element uuid="00f5dd42-872c-4dfa-a99d-04b83e047061" manual="true" dockArea="top">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>MotorOut</seg>
+            </bo>
+            <position x="290.0"/>
+          </element>
+          <element uuid="a903e5c9-dfe9-47b2-a46b-6d2f6789e54e" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>PosIn</seg>
+            </bo>
+            <position y="260.0"/>
+          </element>
+          <element uuid="a76c3eff-bf1e-410f-91ee-0c8ff555ddde" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+              <seg>217277f7-b9d6-42e1-900e-640aa9fa76c6</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>component_instance</seg>
+            <seg>logic</seg>
+          </bo>
+          <position x="90.0" y="50.0"/>
+          <size width="390.0" height="320.0"/>
+        </element>
+        <element uuid="bf79bafb-7134-463d-9db6-4f926a357dfe" manual="true" dockArea="top">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>DoorOut</seg>
+          </bo>
+          <position x="130.0"/>
+        </element>
+        <element uuid="4d1c5d61-bfd3-4bc6-8ed1-54f3bb3265c9" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>DoorStatusIn</seg>
+          </bo>
+          <position y="180.00000000000006"/>
+        </element>
+        <element uuid="a714c53d-fefa-4ec0-bffc-afd2632db4d8" manual="true" dockArea="top">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>MotorOut</seg>
+          </bo>
+          <position x="380.0000000000001"/>
+        </element>
+        <element uuid="9f26bbf4-3da2-499c-8ad1-0d85b330f945" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>PosIn</seg>
+          </bo>
+          <position y="370.00000000000006"/>
+        </element>
+        <element uuid="2cfaaf33-b0e7-4d5b-96d4-6fac67be2c07" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>ReqIn</seg>
+          </bo>
+          <position/>
+        </element>
+        <element uuid="af390f9b-443e-47cb-a632-e80c96752066" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+            <seg>217277f7-b9d6-42e1-900e-640aa9fa76c6</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>control_proc</seg>
+        </bo>
+        <position x="40.0" y="169.99999999999994"/>
+        <size width="539.9999999999998" height="420.0"/>
+      </element>
+      <element uuid="cd2051ef-2306-46c8-a002-7a4987f34b08" manual="true" dockArea="top">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>DoorOut</seg>
+        </bo>
+        <position x="130.0"/>
+      </element>
+      <element uuid="755d0815-6705-4132-a222-5c79fe11f284" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>DoorStatusIn</seg>
+        </bo>
+        <position y="350.0"/>
+      </element>
+      <element uuid="300c4767-64fa-4a07-ae75-67626bb350a9" manual="true" dockArea="top">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>MotorOut</seg>
+        </bo>
+        <position x="420.0000000000001"/>
+      </element>
+      <element uuid="24e7b12e-592a-4afa-895a-54317823caa0" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>PosIn</seg>
+        </bo>
+        <position y="540.0"/>
+      </element>
+      <element uuid="69879269-37c2-4dfc-a52d-5e9c6c74cf6c" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>ReqIn</seg>
+        </bo>
+        <position y="170.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>control_subsys</seg>
+      </bo>
+      <position x="610.0" y="530.0"/>
+      <size width="672.6978912353509" height="670.0"/>
+    </element>
+    <element uuid="217277f7-b9d6-42e1-900e-640aa9fa76c6" manual="true">
+      <element uuid="a78226b4-040d-40b5-b8f3-4aa88fdfd7c9" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busif_actuator</seg>
+        </bo>
+        <position x="104.24349212646487" y="50.0"/>
+      </element>
+      <element uuid="a9ff4576-21e5-4958-b962-929a63d21c85" manual="true" dockArea="bottom">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busif_sensor</seg>
+        </bo>
+        <position x="70.0" y="66.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>controller_cpu</seg>
+      </bo>
+      <position x="410.0" y="430.0"/>
+      <size width="200.00000000000003" height="90.0"/>
+    </element>
+    <element uuid="608f0d01-0e66-4065-9034-3fd1cf68f097" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>controller_mem</seg>
+      </bo>
+      <position x="420.0" y="390.0"/>
+      <size width="110.0" height="35.0"/>
+    </element>
+    <element uuid="11ec7e31-22b4-453d-a149-03f010c4f863" manual="true">
+      <element uuid="7fb921ec-bf41-49da-b2c4-7286a6e54ddf" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busif</seg>
+        </bo>
+        <position x="97.76301956176746" y="20.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>door_cpu</seg>
+      </bo>
+      <position x="640.0" y="470.0"/>
+      <size width="137.92708206176746" height="60.0"/>
+    </element>
+    <element uuid="4d1ac9a6-1643-46c3-9663-abcbe76a3dcf" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>door_mem</seg>
+      </bo>
+      <position x="620.0" y="430.0"/>
+      <size width="90.0" height="35.0"/>
+    </element>
+    <element uuid="b2bfc72b-8f38-4a15-a3b7-2a9ae6e1684e" manual="true">
+      <element uuid="86ffd298-2c28-408e-abf4-442e9ac9156e" manual="true">
+        <element uuid="2ccfb466-1391-4ada-a649-64e1850ad255" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>RequestOut</seg>
+          </bo>
+          <position x="6.84765625" y="30.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>button</seg>
+        </bo>
+        <position x="10.0" y="140.0"/>
+        <size width="90.0" height="80.0"/>
+      </element>
+      <element uuid="bc12680d-c2fa-4fec-a722-42b54dc099c9" manual="true">
+        <element uuid="a741c162-ac4c-4c89-b7e0-1de0b26d3133" manual="true">
+          <element uuid="098c9d34-f76a-4b0b-a7d6-896e2e62aac6" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>ButtonIn</seg>
+            </bo>
+            <position y="60.0"/>
+          </element>
+          <element uuid="562cf00a-ad8c-4132-9d85-0e4f51e407dc" manual="true" dockArea="right">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>ButtonOut</seg>
+            </bo>
+            <position x="147.96094131469727" y="60.0"/>
+          </element>
+          <element uuid="01da1624-2b43-471f-ad51-93cfa4e822d1" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+              <seg>217277f7-b9d6-42e1-900e-640aa9fa76c6</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>component_instance</seg>
+            <seg>reader</seg>
+          </bo>
+          <position x="50.0" y="50.0"/>
+          <size width="220.0" height="110.0"/>
+        </element>
+        <element uuid="66ff34b6-172e-47e0-97ac-5172b5442d69" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>ReqIn</seg>
+          </bo>
+          <position y="110.00000000000007"/>
+        </element>
+        <element uuid="50da82c8-357d-4243-a133-026521ea2c8d" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>ReqOut</seg>
+          </bo>
+          <position x="272.0494842529297" y="110.00000000000003"/>
+        </element>
+        <element uuid="e5824cc1-8a65-4110-a1d8-264c6652ab56" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+            <seg>217277f7-b9d6-42e1-900e-640aa9fa76c6</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>proc</seg>
+        </bo>
+        <position x="130.0" y="60.0"/>
+        <size width="330.0" height="180.0"/>
+      </element>
+      <element uuid="a9c61515-c3fc-428b-83dd-876289f22302" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c1 : LiftSystem_impl_Instance.input_subsys.button.RequestOut -> LiftSystem_impl_Instance.input_subsys.proc.ReqIn</seg>
+        </bo>
+      </element>
+      <element uuid="9eacecb3-9bec-4070-8342-b41af2ce26f0" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c1 : LiftSystem_impl_Instance.input_subsys.proc.ReqIn -> LiftSystem_impl_Instance.input_subsys.proc.reader.ButtonIn</seg>
+        </bo>
+      </element>
+      <element uuid="8417b706-98dd-4cd8-9aea-129a8a970b57" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>ReqOut</seg>
+        </bo>
+        <position x="452.0494842529297" y="170.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>input_subsys</seg>
+      </bo>
+      <position x="10.0" y="530.0"/>
+      <size width="510.0" height="260.0"/>
+    </element>
+    <element uuid="70030c22-8f42-4d88-8f01-231f2dd351ec" manual="true">
+      <element uuid="1f0f2095-6698-4c8c-abd6-ecd994e7a8b5" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busif</seg>
+        </bo>
+        <position y="20.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>motor_cpu</seg>
+      </bo>
+      <position x="1110.0" y="470.0"/>
+      <size width="150.0" height="60.0"/>
+    </element>
+    <element uuid="8bc21f85-0185-4d53-93b0-eccbafb1ff7b" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>motor_mem</seg>
+      </bo>
+      <position x="1170.0" y="430.0"/>
+      <size width="100.0" height="35.0"/>
+    </element>
+    <element uuid="8bc316d8-32d9-47c6-ace6-ed06d22e0e44" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>passengers</seg>
+      </bo>
+      <position x="100.0" y="150.0"/>
+      <size width="250.0" height="180.0"/>
+    </element>
+    <element uuid="07b42559-2058-4f28-add4-551aa6d6d13d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>sensor_bus</seg>
+      </bo>
+      <position x="510.0" y="980.0"/>
+      <size width="100.0" height="35.0"/>
+    </element>
+    <element uuid="96b45f9c-f5c3-417d-9ac8-3916c3b75039" manual="true">
+      <element uuid="07b97bdc-128b-4c45-a6dd-8e48658589f6" manual="true">
+        <element uuid="6d3c57ea-ffa8-4274-afb1-b491bb12ad94" manual="true">
+          <element uuid="13259e9b-0472-4495-b9fd-1497d14697b0" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>StatusIn</seg>
+            </bo>
+            <position y="30.0"/>
+          </element>
+          <element uuid="13870f43-ab7f-4ddb-8991-3abb64106467" manual="true" dockArea="right">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>StatusOut</seg>
+            </bo>
+            <position x="98.70963668823242" y="30.0"/>
+          </element>
+          <element uuid="87c0d3f7-d00b-4f23-ac42-7b683b6138e6" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+              <seg>217277f7-b9d6-42e1-900e-640aa9fa76c6</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>component_instance</seg>
+            <seg>reader</seg>
+          </bo>
+          <position x="60.0" y="30.0"/>
+          <size width="170.0" height="100.0"/>
+        </element>
+        <element uuid="cf46e86a-e281-4fb2-b009-ebaf8752edb9" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>StatusIn</seg>
+          </bo>
+          <position y="60.00000000000007"/>
+        </element>
+        <element uuid="33ac74dd-2afa-4eac-aec8-e0f0b3720324" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>StatusOut</seg>
+          </bo>
+          <position x="228.70963668823242" y="60.00000000000003"/>
+        </element>
+        <element uuid="9d28f9f7-6fd8-4008-b1f7-f230a4cf3cd5" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+            <seg>217277f7-b9d6-42e1-900e-640aa9fa76c6</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>door_proc</seg>
+        </bo>
+        <position x="130.0" y="30.0"/>
+        <size width="300.0" height="156.0"/>
+      </element>
+      <element uuid="01707b3c-8706-4617-860e-915513d12090" manual="true">
+        <element uuid="b87f442a-f9db-45c8-b62a-e12851d8c842" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>StatusOut</seg>
+          </bo>
+          <position x="18.709636688232422" y="30.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>doorsensor</seg>
+        </bo>
+        <position x="10.0" y="60.0"/>
+        <size width="90.0" height="80.0"/>
+      </element>
+      <element uuid="064a3918-eb1e-4e22-aba0-2cbf4cf1decd" manual="true">
+        <element uuid="15672574-c8f4-4073-8f47-7ba2c2a6a624" manual="true">
+          <element uuid="6a083e8f-9894-44ec-8f9b-333d8128fc12" manual="true" dockArea="left">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>PosIn</seg>
+            </bo>
+            <position y="30.0"/>
+          </element>
+          <element uuid="730d8f30-7617-474d-adae-0306bb2e0f09" manual="true" dockArea="right">
+            <bo>
+              <seg>org.osate.ge.diagrams.instance</seg>
+              <seg>feature_instance</seg>
+              <seg>PosOut</seg>
+            </bo>
+            <position x="123.53385925292966" y="30.0"/>
+          </element>
+          <element uuid="d4e6230c-2e3f-4869-8aff-f0932c8efbc6" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+              <seg>217277f7-b9d6-42e1-900e-640aa9fa76c6</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>component_instance</seg>
+            <seg>reader</seg>
+          </bo>
+          <position x="50.0" y="40.0"/>
+          <size width="179.99999999999997" height="90.0"/>
+        </element>
+        <element uuid="e46d373c-a301-4770-a52f-5926c6841943" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>PosIn</seg>
+          </bo>
+          <position y="70.00000000000007"/>
+        </element>
+        <element uuid="f7918519-f6f1-4aed-a4d0-79253c37a526" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>PosOut</seg>
+          </bo>
+          <position x="243.5338592529297" y="70.00000000000014"/>
+        </element>
+        <element uuid="689a552e-ca29-4397-8e39-874f55912d9b" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+            <seg>217277f7-b9d6-42e1-900e-640aa9fa76c6</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>proc</seg>
+        </bo>
+        <position x="130.0" y="210.0"/>
+        <size width="300.0" height="156.0"/>
+      </element>
+      <element uuid="e8003226-6f07-4d52-b191-d5ebee209eaf" manual="true">
+        <element uuid="5ab64243-89b4-4269-b07e-01aed3045558" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>PosOut</seg>
+          </bo>
+          <position x="33.53385925292969" y="30.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>sensor</seg>
+        </bo>
+        <position x="10.0" y="250.0"/>
+        <size width="90.0" height="80.0"/>
+      </element>
+      <element uuid="88a04eab-6f96-4250-87be-a007d357da59" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c1 : LiftSystem_impl_Instance.sensor_subsys.door_proc.StatusIn -> LiftSystem_impl_Instance.sensor_subsys.door_proc.reader.StatusIn</seg>
+        </bo>
+      </element>
+      <element uuid="f9c89b5a-2a15-4a88-afe9-da2b58d1087b" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c1 : LiftSystem_impl_Instance.sensor_subsys.proc.PosIn -> LiftSystem_impl_Instance.sensor_subsys.proc.reader.PosIn</seg>
+        </bo>
+      </element>
+      <element uuid="f10eda58-eb46-4599-92c5-e55deb59d665" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c1 : LiftSystem_impl_Instance.sensor_subsys.sensor.PosOut -> LiftSystem_impl_Instance.sensor_subsys.proc.PosIn</seg>
+        </bo>
+      </element>
+      <element uuid="2e9b1aee-a404-488b-9e98-2b038a07a2b7" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>c3 : LiftSystem_impl_Instance.sensor_subsys.doorsensor.StatusOut -> LiftSystem_impl_Instance.sensor_subsys.door_proc.StatusIn</seg>
+        </bo>
+      </element>
+      <element uuid="ab4c658b-51f7-42ab-828f-4b6d55c8f540" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>DoorStatusOut</seg>
+        </bo>
+        <position x="399.80989837646484" y="90.0"/>
+      </element>
+      <element uuid="2e961857-64f0-4caa-8339-051cba5b8e1b" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>PosOut</seg>
+        </bo>
+        <position x="443.5338592529297" y="280.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>sensor_subsys</seg>
+      </bo>
+      <position x="10.0" y="790.0"/>
+      <size width="500.0" height="409.99999999999955"/>
+    </element>
+    <element uuid="daab4557-3bd0-40ab-bf42-e140ac70e711" manual="true">
+      <element uuid="9d5137da-d224-4e60-9f44-94479c8681f2" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b_ctrl_act : LiftSystem_impl_Instance.controller_cpu.busif_actuator -> LiftSystem_impl_Instance.actu_bus</seg>
+      </bo>
+    </element>
+    <element uuid="24cd230c-c07b-4710-be3e-0209a77a8c41" manual="true">
+      <element uuid="de74bb85-1860-46c5-b320-0727542231d3" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b_ctrl_sensor : LiftSystem_impl_Instance.controller_cpu.busif_sensor -> LiftSystem_impl_Instance.sensor_bus</seg>
+      </bo>
+    </element>
+    <element uuid="7bc324b0-c04a-4b32-8157-a23d95a379d8" manual="true">
+      <element uuid="86a25412-37c0-4ae0-94a7-0dea2782fb4f" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b_door : LiftSystem_impl_Instance.door_cpu.busif -> LiftSystem_impl_Instance.actu_bus</seg>
+      </bo>
+    </element>
+    <element uuid="d3a2ba77-42bd-405d-82a8-82f9eb4a1859" manual="true">
+      <element uuid="7f256dbe-9d27-46d9-9348-6b0dbd7893ad" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b_motor : LiftSystem_impl_Instance.motor_cpu.busif -> LiftSystem_impl_Instance.actu_bus</seg>
+      </bo>
+    </element>
+    <element uuid="b3c28ca7-434d-4e94-84b8-e390c059464a" manual="true">
+      <element uuid="4692ade0-3dc4-41bc-b6b1-252ed220dc8c" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c1 : LiftSystem_impl_Instance.actuator_subsys.door_proc.CmdIn -> LiftSystem_impl_Instance.actuator_subsys.door_proc.driver.DoorCmdIn</seg>
+      </bo>
+    </element>
+    <element uuid="73fda375-beb6-4d7b-a864-6c24853fb4d6" manual="true">
+      <element uuid="400fb8cb-a9d6-4f8c-a2a5-ec0513d94b2a" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c1 : LiftSystem_impl_Instance.actuator_subsys.motor_proc.CmdIn -> LiftSystem_impl_Instance.actuator_subsys.motor_proc.driver.MotorCmdIn</seg>
+      </bo>
+    </element>
+    <element uuid="da2613da-f504-4676-a1f6-5a1ec7e5d1ec" manual="true">
+      <element uuid="4be6951d-632b-4b30-b8c7-502b9dd84b21" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c1 : LiftSystem_impl_Instance.actuator_subsys.MotorIn -> LiftSystem_impl_Instance.actuator_subsys.motor_proc.CmdIn</seg>
+      </bo>
+    </element>
+    <element uuid="2ca57d13-1760-47d5-91f2-21ed56072f0c" manual="true">
+      <element uuid="db0547cb-cd9c-49a3-9069-c24dc8d88d10" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c1 : LiftSystem_impl_Instance.control_subsys.control_proc.ReqIn -> LiftSystem_impl_Instance.control_subsys.control_proc.logic.FloorReqIn</seg>
+      </bo>
+    </element>
+    <element uuid="02ee761f-edba-4101-93d0-b42b4d438752" manual="true">
+      <element uuid="2b7e1e21-a68a-4274-ab01-85d4338c4131" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c1 : LiftSystem_impl_Instance.control_subsys.ReqIn -> LiftSystem_impl_Instance.control_subsys.control_proc.ReqIn</seg>
+      </bo>
+    </element>
+    <element uuid="65fb2348-cf41-453b-a388-2980728b24a5" manual="true">
+      <element uuid="b8b95b0f-fd05-4f4a-b7bc-c283998e1b55" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : LiftSystem_impl_Instance.control_subsys.control_proc.PosIn -> LiftSystem_impl_Instance.control_subsys.control_proc.logic.PosIn</seg>
+      </bo>
+    </element>
+    <element uuid="f99df703-f61c-4633-a2a5-6b0dab959880" manual="true">
+      <element uuid="73abfeba-b763-4817-8d03-ab8475caeee2" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : LiftSystem_impl_Instance.control_subsys.PosIn -> LiftSystem_impl_Instance.control_subsys.control_proc.PosIn</seg>
+      </bo>
+    </element>
+    <element uuid="980d98a1-fd06-4768-93df-1874e01826a9" manual="true">
+      <element uuid="92ab62e7-c92a-412e-a276-8207323c944b" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : LiftSystem_impl_Instance.input_subsys.proc.reader.ButtonOut -> LiftSystem_impl_Instance.input_subsys.proc.ReqOut</seg>
+      </bo>
+    </element>
+    <element uuid="8f3bf0cd-8e95-47bd-8d60-9fa78e2a933d" manual="true">
+      <element uuid="885e02e5-fff6-4367-9877-506489bbb037" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : LiftSystem_impl_Instance.input_subsys.proc.ReqOut -> LiftSystem_impl_Instance.input_subsys.ReqOut</seg>
+      </bo>
+    </element>
+    <element uuid="1a2c7793-6f3a-4d4d-9a14-e80b83c2962f" manual="true">
+      <element uuid="3a3ef7e2-b1c8-4a30-ab6b-130408b7683b" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : LiftSystem_impl_Instance.sensor_subsys.door_proc.reader.StatusOut -> LiftSystem_impl_Instance.sensor_subsys.door_proc.StatusOut</seg>
+      </bo>
+    </element>
+    <element uuid="1bf22bf1-73a7-4792-8fbe-0f4a01e1e0b2" manual="true">
+      <element uuid="668dc00d-a465-434a-947f-3fe6200fba1a" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : LiftSystem_impl_Instance.sensor_subsys.proc.PosOut -> LiftSystem_impl_Instance.sensor_subsys.PosOut</seg>
+      </bo>
+    </element>
+    <element uuid="565d7582-194b-48c0-83cb-7e7995afec27" manual="true">
+      <element uuid="c6aa4cc8-1385-4289-affe-23b8fdeda0e7" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : LiftSystem_impl_Instance.sensor_subsys.proc.reader.PosOut -> LiftSystem_impl_Instance.sensor_subsys.proc.PosOut</seg>
+      </bo>
+    </element>
+    <element uuid="4ed6c7f3-b244-4d32-9053-1181fd161bbd" manual="true">
+      <element uuid="099e52cb-9b18-4495-8d23-6e1cc7c34108" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c3 : LiftSystem_impl_Instance.actuator_subsys.DoorIn -> LiftSystem_impl_Instance.actuator_subsys.door_proc.CmdIn</seg>
+      </bo>
+    </element>
+    <element uuid="f5f9742c-7540-4d4f-b82c-d8303ea5e93f" manual="true">
+      <element uuid="abca608f-3956-4876-983a-cfe1a9d8a76b" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c3 : LiftSystem_impl_Instance.control_subsys.control_proc.DoorStatusIn -> LiftSystem_impl_Instance.control_subsys.control_proc.logic.DoorStatusIn</seg>
+      </bo>
+    </element>
+    <element uuid="6950a9f5-f7e4-4c6f-8ea1-5dc2ef0edc2a" manual="true">
+      <element uuid="2d6720fa-f1d2-4729-ba50-ac09a21ef1d4" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c3 : LiftSystem_impl_Instance.control_subsys.DoorStatusIn -> LiftSystem_impl_Instance.control_subsys.control_proc.DoorStatusIn</seg>
+      </bo>
+    </element>
+    <element uuid="e9918c5e-fd4f-435d-873b-88c52f5ab831" manual="true">
+      <element uuid="745d506f-e2ae-4c47-a8b5-842b31271a2c" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c4 : LiftSystem_impl_Instance.control_subsys.control_proc.logic.MotorOut -> LiftSystem_impl_Instance.control_subsys.control_proc.MotorOut</seg>
+      </bo>
+    </element>
+    <element uuid="9109a3c0-787e-4262-b716-795d3b57d1f7" manual="true">
+      <element uuid="5d11dff1-28f2-4b2b-b1d6-accea504d722" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c4 : LiftSystem_impl_Instance.control_subsys.control_proc.MotorOut -> LiftSystem_impl_Instance.control_subsys.MotorOut</seg>
+      </bo>
+    </element>
+    <element uuid="b8cd99bc-87fa-40da-8179-c8563840855a" manual="true">
+      <element uuid="fb4e36aa-034d-49d3-8c26-0906c67fbe00" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c4 : LiftSystem_impl_Instance.sensor_subsys.door_proc.StatusOut -> LiftSystem_impl_Instance.sensor_subsys.DoorStatusOut</seg>
+      </bo>
+    </element>
+    <element uuid="6f69b163-7636-4fb3-adb1-fc7ca2a739df" manual="true">
+      <element uuid="c0913a3b-68d3-47dd-9ccd-e70fb70895df" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c5 : LiftSystem_impl_Instance.control_subsys.control_proc.DoorOut -> LiftSystem_impl_Instance.control_subsys.DoorOut</seg>
+      </bo>
+    </element>
+    <element uuid="e950dfb4-5f56-4fa6-ad22-16934b850b17" manual="true">
+      <element uuid="fedd8069-3d38-43f3-9ae2-2f9058ea98ad" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c5 : LiftSystem_impl_Instance.control_subsys.control_proc.logic.DoorOut -> LiftSystem_impl_Instance.control_subsys.control_proc.DoorOut</seg>
+      </bo>
+    </element>
+    <element uuid="131b78ed-d82e-49ba-8b32-3053093bd73e" manual="true">
+      <element uuid="0265fbeb-77c6-433d-b0c9-d6f18d05a535" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_door : LiftSystem_impl_Instance.control_subsys.DoorOut -> LiftSystem_impl_Instance.actuator_subsys.DoorIn</seg>
+      </bo>
+    </element>
+    <element uuid="58158fe6-a355-477e-910d-7cb55fc6e468" manual="true">
+      <element uuid="a69f3c3a-e6b3-477b-8abb-adc9753d04b8" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_doorstat : LiftSystem_impl_Instance.sensor_subsys.DoorStatusOut -> LiftSystem_impl_Instance.control_subsys.DoorStatusIn</seg>
+      </bo>
+    </element>
+    <element uuid="6b4ff72a-0e90-4db5-8f17-1219bd2b3f2c" manual="true">
+      <element uuid="3da2b5ea-ad62-4a8e-871e-d231c528f6fb" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>4d533e02-f86d-468d-8a99-01ae667eb3e6</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_motor : LiftSystem_impl_Instance.control_subsys.MotorOut -> LiftSystem_impl_Instance.actuator_subsys.MotorIn</seg>
+      </bo>
+    </element>
+    <element uuid="f48541b1-82b0-40ae-9b8f-a83b07e11d40" manual="true">
+      <element uuid="90d8049a-1d7a-4e5f-8f8e-8960eb130472" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_pos : LiftSystem_impl_Instance.sensor_subsys.PosOut -> LiftSystem_impl_Instance.control_subsys.PosIn</seg>
+      </bo>
+    </element>
+    <element uuid="53e3d6dd-cbe7-4fda-a92b-b0ab3897c80d" manual="true">
+      <element uuid="536b1f11-0433-455c-99c2-bc439cd1bacd" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>07b42559-2058-4f28-add4-551aa6d6d13d</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_req : LiftSystem_impl_Instance.input_subsys.ReqOut -> LiftSystem_impl_Instance.control_subsys.ReqIn</seg>
+      </bo>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/proj2/instances/liftpk_liftsystem_impl_instance.aaxl2</seg>
+    </bo>
+    <position x="-160.0" y="-130.0"/>
+    <size width="1390.0" height="1209.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties>
+      <property>deployment_properties::actual_processor_binding</property>
+      <property>deployment_properties::actual_connection_binding</property>
+    </enabledAadlProperties>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/proj2/instances/liftpk_liftsystem_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

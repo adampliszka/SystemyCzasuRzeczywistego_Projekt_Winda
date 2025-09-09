@@ -1,0 +1,21 @@
+Weight totals Report
+
+Warning! sensor_bus: [L] No net weight plus subcomponent weight or no gross weight
+Warning! actu_bus: [L] No net weight plus subcomponent weight or no gross weight
+passengers: [L] Sum of weights / gross weight is 1000.000 kg (no limit specified)
+controller_mem: [L] Sum of weights / gross weight is 0.500 kg (no limit specified)
+motor_mem: [L] Sum of weights / gross weight is 0.100 kg (no limit specified)
+door_mem: [L] Sum of weights / gross weight is 0.100 kg (no limit specified)
+controller_cpu: [L] Sum of weights / gross weight is 2.000 kg (no limit specified)
+motor_cpu: [L] Sum of weights / gross weight is 1.000 kg (no limit specified)
+door_cpu: [L] Sum of weights / gross weight is 1.000 kg (no limit specified)
+button: [L] Sum of weights / gross weight is 0.200 kg (no limit specified)
+input_subsys: [L] Sum of weights / gross weight is 0.200 kg (no limit specified)
+sensor: [L] Sum of weights / gross weight is 0.300 kg (no limit specified)
+doorsensor: [L] Sum of weights / gross weight is 0.250 kg (no limit specified)
+sensor_subsys: [L] Sum of weights / gross weight is 0.550 kg (no limit specified)
+Warning! control_subsys: [L] No net weight plus subcomponent weight or no gross weight
+motor: [L] Sum of weights / gross weight is 200.000 kg (no limit specified)
+door: [L] Sum of weights / gross weight is 20.000 kg (no limit specified)
+actuator_subsys: [L] Sum of weights / gross weight is 220.000 kg (no limit specified)
+LiftSystem_impl_Instance: [A] Sum of weights (1225.450 kg) is below weight limit of 2000.000 kg (38.7 % Weight slack)
